@@ -1,0 +1,17 @@
+{
+  "name": "nduna-ai-monitoring",
+  "version": "1.0.0",
+  "description": "Project monitoring and dashboard system for Nduna AI",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "node server/index.js",
+    "build": "cd client && npm run build",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
