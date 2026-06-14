@@ -7,6 +7,9 @@ import Projects from './pages/Projects';
 import Team from './pages/Team';
 import Analytics from './pages/Analytics';
 import AgentMonitor from './pages/AgentMonitor';
+import CommandCentres from './pages/CommandCentres';
+import IntelligenceHub from './pages/IntelligenceHub';
+import OperationsSuite from './pages/OperationsSuite';
 import './App.css';
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/agent" element={<AgentMonitor />} />
+            <Route path="/command-centres" element={<CommandCentres />} />
+            <Route path="/intelligence" element={<IntelligenceHub />} />
+            <Route path="/operations" element={<OperationsSuite />} />
           </Routes>
         </main>
         <Footer />

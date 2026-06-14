@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { FiActivity, FiAlertTriangle, FiCalendar, FiCheckCircle, FiRefreshCw, FiTrendingUp } from 'react-icons/fi';
+import { getProgressReading } from '../utils/projectProgress';
 import '../styles/AgentMonitor.css';
 
 const API_URL = 'http://localhost:5000/api/agent';
@@ -171,7 +172,7 @@ export default function AgentMonitor() {
             title="At-risk projects"
             items={signals.atRiskProjects || []}
             emptyText="No at-risk projects detected."
-            getText={(project) => `${project.name} - ${project.status} - ${project.progress || 0}% progress`}
+            getText={(project) => `${project.name} - ${project.status} - ${getProgressReading(project).label}`}
           />
           <SignalList
             title="Overdue milestones"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StatsCard, ProjectStatusChart, ProgressChart, TrendChart } from '../components/Charts';
+import { getProgressReading } from '../utils/projectProgress';
 import '../styles/Dashboard.css';
 
 export default function Dashboard() {
@@ -39,10 +40,14 @@ export default function Dashboard() {
     value: s.count
   })) || [];
 
-  const progressData = projects.map(p => ({
-    name: p.name.substring(0, 15),
-    progress: p.progress
+  const progressData = projects.map(project => ({
+    name: project.name.substring(0, 15),
+    progress: getProgressReading(project).value
   })).slice(0, 5) || [];
+
+  const averageProgress = projects.length
+    ? Math.round(projects.reduce((sum, project) => sum + getProgressReading(project).value, 0) / projects.length)
+    : 0;
 
   const trendData = [
     { month: 'Jan', completed: 2, active: 3 },
@@ -109,7 +114,7 @@ export default function Dashboard() {
         />
         <StatsCard
           title="Average Progress"
-          value={`${Math.round(stats?.avgProgress || 0)}%`}
+          value={`${averageProgress}%`}
           icon="📈"
           color="#f093fb"
         />
@@ -124,21 +129,25 @@ export default function Dashboard() {
       <div className="dashboard-section">
         <h2>Recent Projects</h2>
         <div className="recent-projects">
-          {projects.slice(0, 5).map(project => (
-            <div key={project.id} className="recent-project-item">
-              <div className="item-header">
-                <h3>{project.name}</h3>
-                <span className="status">{project.status}</span>
-              </div>
-              <p>{project.client}</p>
-              <div className="item-progress">
-                <div className="progress-bar-small">
-                  <div style={{ width: `${project.progress}%` }} className="progress-fill-small"></div>
+          {projects.slice(0, 5).map(project => {
+            const progressReading = getProgressReading(project);
+
+            return (
+              <div key={project.id} className="recent-project-item">
+                <div className="item-header">
+                  <h3>{project.name}</h3>
+                  <span className="status">{project.status}</span>
                 </div>
-                <span>{project.progress}%</span>
+                <p>{project.client}</p>
+                <div className="item-progress">
+                  <div className="progress-bar-small" aria-label={progressReading.label}>
+                    <div style={{ width: `${progressReading.value}%` }} className="progress-fill-small"></div>
+                  </div>
+                  <span>{progressReading.label}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

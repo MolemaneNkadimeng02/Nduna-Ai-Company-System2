@@ -49,6 +49,55 @@
   line-height: 1.4;
 }
 
+.health-strip {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+  border: 1px solid #e4eaf2;
+  background: #f8fafc;
+}
+
+.health-strip span,
+.health-strip strong,
+.health-strip em {
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.health-strip span,
+.health-strip strong {
+  font-weight: 800;
+}
+
+.health-strip em {
+  color: #667085;
+  font-style: normal;
+  text-align: right;
+}
+
+.health-healthy {
+  border-color: #bfe8cf;
+  background: #f0fbf4;
+  color: #167342;
+}
+
+.health-watch {
+  border-color: #f2d394;
+  background: #fff8e9;
+  color: #8a5a00;
+}
+
+.health-risk,
+.health-critical {
+  border-color: #f0bbc7;
+  background: #fff5f7;
+  color: #9a233d;
+}
+
 .project-progress {
   margin: 15px 0;
 }
@@ -56,15 +105,18 @@
 .progress-label {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 8px;
   font-size: 0.85rem;
   color: #666;
   font-weight: 500;
+  align-items: center;
 }
 
 .progress-value {
   color: #1e90ff;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .progress-bar {

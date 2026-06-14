@@ -154,6 +154,13 @@
   margin-top: 10px;
 }
 
+.item-progress span {
+  color: #1e90ff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .progress-bar-small {
   flex: 1;
   height: 6px;

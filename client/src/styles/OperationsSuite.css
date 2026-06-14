@@ -1,0 +1,329 @@
+.ops-page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+.ops-header {
+  margin-bottom: 24px;
+}
+
+.ops-header span {
+  display: block;
+  color: #0b5ed7;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ops-header h1 {
+  color: #172033;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.ops-header p,
+.ops-panel-title p {
+  color: #5b6475;
+  line-height: 1.55;
+}
+
+.ops-grid {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.ops-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ops-panel {
+  background: #fff;
+  border: 1px solid #e3e9f2;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.ops-panel-title {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.ops-panel-title > svg {
+  color: #0b5ed7;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.ops-panel-title h2 {
+  color: #172033;
+  font-size: 1.16rem;
+  margin-bottom: 5px;
+}
+
+.role-switcher,
+.permission-list,
+.doc-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.role-switcher button,
+.ops-submit,
+.chat-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.role-switcher button {
+  min-height: 38px;
+  padding: 8px 12px;
+  background: #eef5ff;
+  color: #17427a;
+}
+
+.role-switcher button.active {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.permission-list {
+  margin-top: 14px;
+}
+
+.permission-list span {
+  background: #f8fafc;
+  border: 1px solid #e3e9f2;
+  color: #344056;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.ops-form {
+  display: grid;
+  gap: 12px;
+}
+
+.ops-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ops-field {
+  display: grid;
+  gap: 6px;
+}
+
+.ops-field span {
+  color: #344056;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.ops-field input,
+.ops-field select,
+.ops-field textarea,
+.chat-form input {
+  width: 100%;
+  border: 1px solid #d9e2ef;
+  border-radius: 8px;
+  padding: 10px 11px;
+  color: #172033;
+  background: #fff;
+}
+
+.ops-field textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.ops-submit {
+  min-height: 40px;
+  padding: 9px 14px;
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.milestone-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.milestone-column {
+  background: #f8fafc;
+  border: 1px solid #e3e9f2;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 180px;
+}
+
+.milestone-column h3 {
+  color: #172033;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.milestone-card,
+.ops-list-item,
+.finance-row,
+.activity-item {
+  background: #fff;
+  border: 1px solid #e5ebf3;
+  border-radius: 8px;
+  padding: 11px;
+}
+
+.milestone-card {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 9px;
+}
+
+.milestone-card strong,
+.finance-row strong,
+.activity-item strong {
+  color: #172033;
+}
+
+.milestone-card span,
+.milestone-card small,
+.finance-row span,
+.activity-item em {
+  color: #667085;
+}
+
+.health-healthy {
+  border-color: #bfe8cf;
+}
+
+.health-watch {
+  border-color: #f2d394;
+}
+
+.health-risk,
+.health-critical {
+  border-color: #f0bbc7;
+}
+
+.ops-list,
+.finance-table,
+.activity-feed {
+  display: grid;
+  gap: 10px;
+}
+
+.ops-list-item {
+  color: #344056;
+}
+
+.chat-box {
+  display: grid;
+  gap: 8px;
+  max-height: 230px;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e3e9f2;
+  margin-bottom: 10px;
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.chat-message.ai {
+  background: #eef5ff;
+  color: #17427a;
+}
+
+.chat-message.user {
+  background: #eaf8ef;
+  color: #167342;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 8px;
+}
+
+.chat-form button {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.finance-row {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, minmax(110px, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+.finance-row em {
+  color: #17427a;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.activity-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.activity-item span {
+  color: #0b5ed7;
+  font-weight: 800;
+}
+
+.ops-empty {
+  color: #667085;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1100px) {
+  .ops-grid.two,
+  .milestone-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .finance-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ops-page {
+    padding: 24px 16px 40px;
+  }
+
+  .ops-grid.two,
+  .milestone-board,
+  .ops-form-row,
+  .finance-row,
+  .activity-item {
+    grid-template-columns: 1fr;
+  }
+}

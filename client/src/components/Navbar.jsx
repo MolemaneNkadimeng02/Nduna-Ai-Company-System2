@@ -34,6 +34,15 @@ export default function Navbar({ isOpen, setIsOpen }) {
             <Link to="/analytics" className="nav-link">Analytics</Link>
           </li>
           <li>
+            <Link to="/command-centres" className="nav-link">Command</Link>
+          </li>
+          <li>
+            <Link to="/intelligence" className="nav-link">Intel</Link>
+          </li>
+          <li>
+            <Link to="/operations" className="nav-link">Ops</Link>
+          </li>
+          <li>
             <Link to="/agent" className="nav-link">AI Agent</Link>
           </li>
           <li className="nav-contact">
