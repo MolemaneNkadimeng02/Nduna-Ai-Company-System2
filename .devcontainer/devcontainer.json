@@ -1,0 +1,26 @@
+{
+  "name": "Nduna AI Operations App",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "remoteUser": "root",
+  "postCreateCommand": "npm run install-all",
+  "forwardPorts": [80, 5000],
+  "portsAttributes": {
+    "80": {
+      "label": "Nduna AI App",
+      "onAutoForward": "openPreview",
+      "visibility": "public"
+    },
+    "5000": {
+      "label": "Nduna AI API",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

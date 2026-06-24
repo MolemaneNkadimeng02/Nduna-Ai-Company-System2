@@ -94,6 +94,15 @@ npm run client
 App frontend will be available at: `http://localhost:3000`
 Backend API will be at: `http://localhost:5000`
 
+### GitHub Codespaces
+
+Open the repository in GitHub Codespaces, then run:
+```bash
+npm run codespace
+```
+
+The app runs on port `80` and the API runs on port `5000`. In the Codespaces **Ports** tab, open the forwarded `80` port to use the app in your browser.
+
 ### Build
 
 Build the frontend for production:

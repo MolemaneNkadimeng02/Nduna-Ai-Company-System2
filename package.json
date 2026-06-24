@@ -6,6 +6,7 @@
   "scripts": {
     "install-all": "npm install && cd client && npm install && cd ../server && npm install",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "codespace": "concurrently \"cd server && npm run dev\" \"cd client && npm run codespace\"",
     "start": "node server/index.js",
     "build": "cd client && npm run build",
     "preview": "cd client && npm run preview",
