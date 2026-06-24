@@ -1,9 +1,9 @@
 {
-  "name": "nduna-ai-client",
+  "name": "nduna-ai-operations-app",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "React frontend for Nduna AI Project Monitoring System",
+  "description": "Installable React operations app for Nduna AI project monitoring",
   "author": "Nduna AI",
   "license": "ISC",
   "dependencies": {

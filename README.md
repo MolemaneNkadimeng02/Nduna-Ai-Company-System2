@@ -1,15 +1,17 @@
-# Nduna AI Project Monitoring System
+# Nduna AI Operations App
 
-A comprehensive web-based project management and monitoring system for Nduna AI company. This system allows tracking of AI integration projects, team management, and performance analytics.
+An installable web app for Nduna AI operations. It brings project monitoring, team management, analytics, command centres, and AI agent oversight into a mobile-friendly React app backed by an Express and SQLite API.
 
 ## Features
 
+- **Installable App**: Browser-installable PWA shell with app metadata, icon, theme color, and offline fallback
 - **Dashboard**: Real-time overview of all projects with key metrics and visualizations
 - **Project Management**: Create, update, and track AI integration projects with detailed status
 - **Team Management**: Manage team members and their assignments
 - **Analytics**: Performance metrics and project insights
 - **Status Updates**: Track project progress with real-time updates
 - **Milestones**: Manage project milestones and deliverables
+- **Command Views**: Command centre, intelligence hub, operations suite, and AI agent monitoring screens
 
 ## Project Structure
 
@@ -89,7 +91,7 @@ npm run server
 npm run client
 ```
 
-Frontend will be available at: `http://localhost:3000`
+App frontend will be available at: `http://localhost:3000`
 Backend API will be at: `http://localhost:5000`
 
 ### Build
@@ -97,6 +99,11 @@ Backend API will be at: `http://localhost:5000`
 Build the frontend for production:
 ```bash
 npm run build
+```
+
+Preview the production app:
+```bash
+npm run preview
 ```
 
 ## API Endpoints
